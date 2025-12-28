@@ -1,0 +1,57 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: auto; /* let content grow */
+    padding: 40px 20px;
+}
+
+.popular img {
+    width: 100%; /* images take full width of container */
+    object-fit: cover;
+    
+}
+
+.popular h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.popular hr {
+    width: 200px;
+    height: 6px;
+    background: #252525;
+    border: none;
+}
+
+.popular-item {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;         /* allow items to wrap to next line */
+    justify-content: center; /* center items horizontally */
+    gap: 30px;               /* space between product cards */
+}
+
+/* Each product card */
+.popular-item .item {
+    flex: 0 1 220px;  /* grow 0, shrink 1, base width 220px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width: 480px) {
+  .popular h1 {
+    font-size: 28px;
+  }
+
+  .popular-item .item {
+    flex: 0 1 150px;
+  }
+
+  .popular-item {
+    gap: 15px;
+  }
+}

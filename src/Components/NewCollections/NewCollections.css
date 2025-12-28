@@ -1,0 +1,140 @@
+/* MAIN CONTAINER */
+.new-collections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 40px 20px;
+  height: auto;
+}
+
+/* TITLE */
+.new_collections h1, .new {
+  color: #171717;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.new_collections hr {
+  width: 200px;
+  height: 6px;
+  background: #252525;
+  border: none;
+  margin-bottom: 40px;
+}
+
+/* GRID CONTAINER */
+.collections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+/* EACH PRODUCT CARD */
+.collections .item {
+  flex: 0 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.collections .item:hover {
+  transform: scale(1.05);
+}
+
+/* IMAGE */
+.collections .item img {
+  width: 100%;
+  max-width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* PRODUCT NAME */
+.item-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  overflow-wrap: break-word;
+  max-width: 220px;
+}
+
+/* PRICE CONTAINER */
+.item-prices {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+  width: 100%;
+  max-width: 220px;
+}
+
+.item-price-new {
+  color: #374151;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.item-price-old {
+  color: #8c8c8c;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 768px) {
+  .new_collections h1 {
+    font-size: 36px;
+  }
+  .collections {
+    gap: 20px;
+  }
+  .collections .item {
+    flex: 0 1 180px;
+  }
+  .collections .item img {
+    max-width: 180px;
+    height: 180px;
+  }
+  .item-name {
+    max-width: 180px;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+  .new_collections h1 {
+    font-size: 28px;
+  }
+  .collections {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .collections .item {
+    flex: 0 1 100%;
+  }
+  .collections .item img {
+    max-width: 100%;
+    height: auto;
+  }
+  .item-name {
+    max-width: 100%;
+    font-size: 14px;
+  }
+  .item-prices {
+    justify-content: center;
+    gap: 10px;
+  }
+}
